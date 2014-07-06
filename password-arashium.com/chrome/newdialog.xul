@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<dialog id="donothing" title="Dialog example"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	onload="initNewDlg()"
+	buttons="accept,cancel"
+	buttonlabelaccept="OK"
+	buttonlabelcancel="Cancel"
+	ondialogaccept="return doOK();"
+	ondialogcancel="return doCancel();">
+<script src="manager.js"/>
+<script>
+	function initNewDlg()
+	{
+		this.fileLocation=window.arguments[0];
+		document.getElementById("fileLocation").value=this.fileLocation;
+	}
+	function changeLocation()
+	{
+		document.getElementById("fileLocation").value=openDirDialog(this.fileLocation);
+	}
+	function doOK()
+	{
+		this.fileName=document.getElementById("fileName").value;
+		this.fileLocation=document.getElementById("fileLocation").value;
+		this.ok=true;
+		return true;
+	}
+	function doCancel()
+	{
+		this.ok=false;
+		return true;
+	}
+</script>
+	<groupbox>
+		<label value="File Name:"/>
+		<textbox id="fileName"/>
+		<label value="File Location:"/>
+		<textbox id="fileLocation"/>
+		<button label='change' onclick='changeLocation();'/>
+	</groupbox>
+</dialog>
