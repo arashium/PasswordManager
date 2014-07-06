@@ -9,11 +9,10 @@ This program is tested in Linux.
 
 I wrote this program for my personal usage but now I intend to share it the others. However, I need help of the other people to: 
 
-- Make the code more readable.
+- Fixing codes and bugs.
 - Make is cross platform (linux, windows and macOS) usable.
-- I am not into detail of copywrites of used codes and images. Please give me suggestions.
-- Make the user interface more convenient for user.
-- Fix bugs
+- I am not into detail of copywrites of used encryption codes and images. Please give me suggestions.
+- Make the user interface more user-friendly.
 
 
 Licence
