@@ -1,0 +1,4 @@
+content password chrome/
+
+# Firefox
+content	chrome://browser/content/browser.xul chrome://password/content/password.xul
